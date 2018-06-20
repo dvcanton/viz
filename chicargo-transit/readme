@@ -1,0 +1,24 @@
+THE DATA:
+
+CTA — Ridership — ‘L’ Station Entries — Monthly Day-Type Averages & Totals
+ * Monthly ridership totals for all the CTA train stations
+   broken down by day type (weekend, Sat, Sunday/Holiday)
+
+CTA-System-Information-List-of-L-Stops-Map
+ * Geospatial data about each CTA train stop
+
+
+ FORMULATING QUESTIONS
+
+Overall, what is it you hope to discover?
+What are some specific questions
+  you have before and after reviewing the data?
+What don’t you know that you would like to know?
+
+  Questions
+  * Which of the two train stations next to my apartment
+    is more popular?
+  * What are the most popular stations overall? A
+  * And the least popular?
+  * What part of the city has the most ridership?
+  * Are there any interesting trends in ridership I can see over time?
