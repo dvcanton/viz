@@ -1,0 +1,53 @@
+<head>
+  <!-- Plotly.js -->
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+
+<body>
+
+  <div id="myDiv"><!-- Plotly chart will be drawn inside this DIV --></div>
+  <div id="images"></div>
+  <!-- JQuery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <script>
+  (function() {
+    var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    $.getJSON( flickerAPI, {
+      tags: "mount rainier",
+      tagmode: "any",
+      format: "json"
+    })
+      .done(function( data ) {
+        console.log("sucess")
+        $.each( data.items, function( i, item ) {
+          $( "<img>" ).attr( "src", item.media.m ).appendTo( "#images" );
+          if ( i === 3 ) {
+            return false;
+          }
+        });
+      });
+  })();
+
+  (function() {
+    var flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+    var resturl = "http://localhost/";
+    $.get(resturl, function (){
+      console.log("sucess 2")
+    }).done(function (result) {
+      console.log("sucess 22")
+      console.log(result);
+    //            $.each(result, function(i, field){
+      //              $("div").append(field + " ");
+        //        });
+      //});
+    })
+    .fail(function(err) {
+    console.log(err);
+  });
+
+  })();
+
+  </script>
+  <script src="line_plot.js"> </script>
+</body>
